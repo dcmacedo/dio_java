@@ -32,7 +32,7 @@ O desafio proposto era colocar em prática toda a concepção de análise de neg
    - Métodos:
      - `ligar(String numero)`
      - `atender()`
-     - `iniciarCorreioVoz()`
+     - `iniciarCorreioDeVoz()`
 3. **Navegador na Internet**
    - Métodos:
      - `exibirPagina(String url)`
@@ -44,26 +44,26 @@ O desafio proposto era colocar em prática toda a concepção de análise de neg
 ```mermaid
 classDiagram
     class ReprodutorMusical {
-        <<interface>>
+        <<Interface>>
         +tocar()
         +pausar()
         +selecionarMusica(String musica)
     }
     class AparelhoTelefonico {
-        <<interface>>
+        <<Interface>>
         +ligar(String numero)
         +atender()
-        +iniciarCorreioVoz()
+        +iniciarCorreioDeVoz()
     }
-    class NavegadorInternet {
-        <<interface>>
+    class NavegadorDeInternet {
+        <<Interface>>
         +exibirPagina(String url)
         +adicionarNovaAba()
         +atualizarPagina()
     }
-    iPhone ..|> ReprodutorMusical
-    iPhone ..|> AparelhoTelefonico
-    iPhone ..|> NavegadorInternet
+    iPhone --> ReprodutorMusical
+    iPhone --> AparelhoTelefonico
+    iPhone --> NavegadorDeInternet
     class iPhone {
         -musicaAtual: String
         -numeroLigacao: String
@@ -73,7 +73,7 @@ classDiagram
         +selecionarMusica(String musica)
         +ligar(String numero)
         +atender()
-        +iniciarCorreioVoz()
+        +iniciarCorreioDeVoz()
         +exibirPagina(String url)
         +adicionarNovaAba()
         +atualizarPagina()
