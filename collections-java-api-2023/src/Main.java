@@ -1,6 +1,7 @@
 import list.OperacoesBasicas.ListaTarefa;
 import list.Ordenacao.OrdenacaoPessoa;
 import list.Pesquisa.CatalogoLivros;
+import set.OperacoesBasicas.ConjuntoConvidados;
 
 //TIP To <b>Run</b> code, press <shortcut actionId="Run"/> or
 // click the <icon src="AllIcons.Actions.Execute"/> icon in the gutter.
@@ -28,7 +29,7 @@ public class Main {
 
         System.out.println(catalogoLivros.pesquisarPorAutor("Autor 4"));
         System.out.println(catalogoLivros.pesquisarPorIntervaloAnos(2020,2021));
-        System.out.println(catalogoLivros.pesquisarPorTitulo("Livro 1"));*/
+        System.out.println(catalogoLivros.pesquisarPorTitulo("Livro 1"));
 
         OrdenacaoPessoa ordenacaoPessoa = new OrdenacaoPessoa();
         ordenacaoPessoa.adicionarPessoa("Nome 1", 20,1.56);
@@ -37,6 +38,23 @@ public class Main {
         ordenacaoPessoa.adicionarPessoa("Nome 4", 17,1.56);
 
         System.out.println(ordenacaoPessoa.ordenarPorIdade());
-        System.out.println(ordenacaoPessoa.ordenarPorAltura());
+        System.out.println(ordenacaoPessoa.ordenarPorAltura());*/
+
+        ConjuntoConvidados conjuntoConvidados = new ConjuntoConvidados();
+        System.out.println("Existem " + conjuntoConvidados.contarConvidados() + " dentro do Set de Convidados");
+
+        conjuntoConvidados.adicionarConvidado("Convidado 1",1234);
+        conjuntoConvidados.adicionarConvidado("Convidado 2",1235);
+        conjuntoConvidados.adicionarConvidado("Convidado 3",1235);
+        conjuntoConvidados.adicionarConvidado("Convidado 4",1236);
+
+        System.out.println("Existem " + conjuntoConvidados.contarConvidados() + " dentro do Set de Convidados");
+
+        conjuntoConvidados.exibirConvidados();
+
+        conjuntoConvidados.removerConvidadoPorCodigoConvite(1234);
+        System.out.println("Existem " + conjuntoConvidados.contarConvidados() + " dentro do Set de Convidados");
+
+        conjuntoConvidados.exibirConvidados();
     }
 }
