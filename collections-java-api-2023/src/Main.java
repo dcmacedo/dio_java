@@ -2,6 +2,7 @@ import list.OperacoesBasicas.ListaTarefa;
 import list.Ordenacao.OrdenacaoPessoa;
 import list.Pesquisa.CatalogoLivros;
 import set.OperacoesBasicas.ConjuntoConvidados;
+import set.Ordenacao.CadastroProdutos;
 import set.Pesquisa.AgendaContatos;
 
 //TIP To <b>Run</b> code, press <shortcut actionId="Run"/> or
@@ -57,7 +58,6 @@ public class Main {
         System.out.println("Existem " + conjuntoConvidados.contarConvidados() + " dentro do Set de Convidados");
 
         conjuntoConvidados.exibirConvidados();
-        */
 
         AgendaContatos agendaContatos = new AgendaContatos();
 
@@ -76,5 +76,15 @@ public class Main {
         System.out.println("Contato atualizado: " + agendaContatos.atualizarNumeroContato("Danilo", 456789));
 
         agendaContatos.exibirContatos();
+        */
+
+        CadastroProdutos cadastroProdutos = new CadastroProdutos();
+        cadastroProdutos.adicionarProduto(1L, "Produto 1", 15d, 5);
+        cadastroProdutos.adicionarProduto(2L, "Produto 0", 20d, 10);
+        cadastroProdutos.adicionarProduto(1L, "Produto 3", 10d, 2);
+        cadastroProdutos.adicionarProduto(9L, "Produto 4", 2d, 2);
+
+        System.out.println(cadastroProdutos.exibirProdutosPorNome());
+        System.out.println(cadastroProdutos.exibirProdutosPorPreco());
     }
 }
